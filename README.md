@@ -1,21 +1,14 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** Nigel Fijnheer
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
-
-Markdown is een simpele manier om HTML te schrijven.  
-Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
-
-Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
-
-Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen.
-
+Tijdens FvO ga ik beter worden in het schrijven van CSS. Voor opdracht 1 heb ik gekozen om het Microsoft logo na te gaan maken en er een animatie aan toe te voegen die bij het logo past.
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
+  1. https://css-tricks.com/almanac/selectors/a/after-and-before/
+  2. https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
   3. -...-
 
 
@@ -27,15 +20,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/storyboardv1.jpg" width="375px" alt="storyboard voor opdracht 1">
+
+  ### Feedback
+  Ik heb mijn storyboard laten zien aan mede studeten. De feedback die ik hier op gekregen had was dat er veel potentie in zat, maar dat er nog wel wat aan gedaan moet worden. Mijn conclusie is dat ik nog even verder ga met het bedenken van mijn animatie.
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Het gebruik maken van before en after
+  - Beter worden in het animeren in CSS
+  - Door met alleen gebruik te maken van een H1 en span een werkende animatie en logo te maken
  
 </details>
 
