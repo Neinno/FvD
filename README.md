@@ -25,6 +25,8 @@ Tijdens FvO ga ik beter worden in het schrijven van CSS. Voor opdracht 1 heb ik 
   ### Feedback
   Ik heb mijn storyboard laten zien aan mede studeten. De feedback die ik hier op gekregen had was dat er veel potentie in zat, maar dat er nog wel wat aan gedaan moet worden. Mijn conclusie is dat ik nog even verder ga met het bedenken van mijn animatie.
 
+  ### Storyboard V2:
+  <img src="readme-images/storyboardv2.jpg" width="375px" alt="storyboard versie 2 voor opdracht 1">
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
@@ -39,23 +41,26 @@ Tijdens FvO ga ik beter worden in het schrijven van CSS. Voor opdracht 1 heb ik 
 ## Opdracht 1 reflectie
 
 <details>
-  <summary>uitwerken bij afronden opdracht (voor week 4)</summary>
+  <summary>Afronden opdracht (week 4)</summary>
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Resultaat.jpg" width="375px" alt="uitomst opdracht 1">
 
+  Voor het logo van Microsoft heb ik gekozen om alles een beetje om te laten vallen.
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Tijdens dit project heb ik veel geleerd over CSS animaties, en heb geleerd hoe before en after nou precies werken. Ik wist voordat ik aan dit project ging werken niet dat je meerdere animaties kon toepassen op een element. Dit heb ik gebruikt bij de blokjes van Microsoft.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  <img src="readme-images/dblanimation.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Ik heb het niet voor elkaar kunnen krijgen om de reduced motion toe te passen. 
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  <img src="readme-images/nope1.jpg" width="375px" alt="bummer">
+
+  Wat ook niet gelukt is is om de animatie te blijven loopen. Als de animatie voorbij is gaat hij niet opnieuw
 </details>
 
 

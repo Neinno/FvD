@@ -5,11 +5,11 @@
 /*********/
 @font-face {
 	font-family: 'Segoe UI';
-	src: url('../fonts/Segoe.ttf') format('ttf');
-	font-weight: normal;
 	font-style: normal;
-}
-
+	font-weight: normal;
+	src: url('../fonts/Segoe UI bold.woff') format('woff');
+	font-display: fallback;
+	}
 
 
 
@@ -42,7 +42,19 @@ button, summary {
 	--microsoft-yellow: #FFB900;
 }
 
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text:#eee;
+		--color-background:#151515;
+	}
+}
 
+@media (prefers-reduced-motion) {
+  h1 {
+		animation: textFall pause;
+	}
+}
 
 
 
@@ -62,17 +74,25 @@ body {
 h1 {
 	position: relative;
 	margin: 0;
-	font-size: clamp(1rem, 10vw, 2rem); 
+	font-size: clamp(1rem, 10vw, 2rem);
+	left: 1.25em;
+	animation: textFall 2s forwards;
+	animation-delay: 8.5s;
 }
-
-/* jouw code */
 
 h1 span {
 	margin-right: -5px;
+	animation-duration: 2s;
+	animation-delay: 4s;
+	position: absolute;
+	top: -.7em;
+	right: 4em;
+	opacity: 0;
 }
 
-h1 span:nth-of-type(1)::before, h1 span:nth-of-type(1)::after,
-h1 span:nth-of-type(2)::before, h1 span:nth-of-type(2)::after {
+/* Blokjes */
+html::before, html::after,
+body::before, body::after {
 	content: "";
 	display: block;
 	width: 1em;
@@ -80,29 +100,341 @@ h1 span:nth-of-type(2)::before, h1 span:nth-of-type(2)::after {
 	position: absolute;
 }
 
-h1 span:nth-of-type(1)::before {
+html::before {
 	background-color:var(--microsoft-red);
-	left: -2.4em;
+	left: calc(50% - 2em);
+	top: calc(50% - 1.5em);
+	width: 2em;
+	animation: slideFadeIn 4s forwards,
+						 blockFlyRed 2s forwards 10.5s;
 }
 
-h1 span:nth-of-type(1)::after {
+html::after {
 	background-color:var(--microsoft-green);
-	left: -1.3em;
-	top: 0;
+	left: calc(50% + .25em);
+	top: calc(50% - 1.5em);
+	width: 2em;
+	animation: slideFadeIn 4s forwards,
+						 blockFlyGreen 2s forwards 10.5s;
 }
 
-h1 span:nth-of-type(2)::before {
+body::before {
 	background-color:var(--microsoft-blue);
-	left: -2.4em;
-	top: 1.1em;
+	left: calc(50% - 2em);
+	top: calc(50% + .75em);
+	width: 2em;
+	animation: slideFadeIn 4s forwards,
+						 blockFlyBlue 2s forwards 10.5s;
 }
 
-h1 span:nth-of-type(2)::after {
+body::after {
 	background-color:var(--microsoft-yellow);
-	left: -1.3em;
-	top: 1.1em;
+	left: calc(50% + .25em);
+	top: calc(50% + .75em);
+	width: 2em;
+	animation: slideFadeIn 4s forwards,
+						 blockFlyYellow 2s forwards 10.5s;
 }
 
+
+/* Letters */
 h1 span:last-of-type {
 	margin-right: 0;
 }
+
+h1 span:nth-of-type(1) {
+	animation: letterSlideM 2s forwards;
+	animation-delay: 4.6s;
+}
+
+h1 span:nth-of-type(2) {
+	animation: letterSlideI 2s forwards;
+	animation-delay: 4.4s;
+}
+
+h1 span:nth-of-type(3) {
+	animation: letterSlideC 2s forwards;
+	animation-delay: 5s;
+}
+
+h1 span:nth-of-type(4) {
+	animation: letterSlideR 2s forwards;
+	animation-delay: 4s;
+}
+
+h1 span:nth-of-type(5) {
+	animation: letterSlideO 2s forwards;
+	animation-delay: 3.8s;
+}
+
+h1 span:nth-of-type(6) {
+	animation: letterSlideS 2s forwards;
+	animation-delay: 3.6s;
+}
+
+h1 span:nth-of-type(7) {
+	animation: letterSlideO2 3s forwards;
+	animation-delay: 5.5s;
+}
+
+h1 span:nth-of-type(8) {
+	animation: letterSlideF 2s forwards;
+	animation-delay: 3.2s;
+}
+
+h1 span:nth-of-type(9) {
+	animation: letterSlideT 2s forwards;
+	animation-delay: 3s;
+}
+
+
+
+/****************/
+/* Keyframes */
+/****************/
+@keyframes slideFadeIn {
+  0% {
+		opacity: 0;
+  }
+  50% {
+    transform: translateX(0);
+		opacity: 1;
+  }
+	100% {
+		transform: translateX(-300%);
+	}
+}
+
+@keyframes fadeIn {
+  0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Letter animaties */
+@keyframes letterSlideM {
+	0% {
+		left: -5em;
+	}
+	50% {
+		opacity: 1;
+		
+	}
+	100% {
+		opacity: 1;
+		left: -2.8em;
+	}
+}
+
+@keyframes letterSlideI {
+	0% {
+		left: -5em;
+	}
+	50% {
+		opacity: 1;
+		
+	}
+	100% {
+		opacity: 1;
+		left: -1.8em;
+	}
+}
+
+@keyframes letterSlideC {
+	0% {
+		left: -1.45em;
+		opacity: 1;
+	}
+	10% {
+		left: -1.35em;
+	}
+	20% {
+		left: -1.55em;
+	}
+	30% {
+		left: -1.35em;
+	}
+	40% {
+		left: -1.55em;
+	}
+	50% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0;
+	}
+	80% {
+		opacity: 1;
+	}
+	90% {
+		left: -1.55em;
+	}
+	100% {
+		opacity: 1;
+		left: -1.45em;
+	}
+}
+
+@keyframes letterSlideR {
+	0% {
+		left: -5em;
+	}
+	50% {
+		opacity: 1;
+		
+	}
+	100% {
+		opacity: 1;
+		left: -.9em;
+	}
+}
+
+@keyframes letterSlideO {
+	0% {
+		left: -5em;
+	}
+	50% {
+		opacity: 1;
+		
+	}
+	100% {
+		opacity: 1;
+		left: -.45em;
+	}
+}
+
+@keyframes letterSlideS {
+	0% {
+		left: -5em;
+	}
+	50% {
+		opacity: 1;
+		
+	}
+	100% {
+		opacity: 1;
+		left: .2em;
+	}
+}
+
+@keyframes letterSlideO2 {
+	0% {
+		top: -10em;
+		opacity: 1;
+		left: .7em;
+		animation-timing-function: ease-in;
+	}
+	20% {
+		top: -.7em;
+		animation-timing-function: ease-out;
+	}
+	40% {
+		top: -7em;
+		animation-timing-function: ease-in;
+	}
+	60% {
+		top: -.7em;
+		animation-timing-function: ease-out;
+	}
+	80% {
+		top: -4em;
+		animation-timing-function: ease-in;
+	}
+	100% {
+		top: -.7em;
+		animation-timing-function: ease-out;
+		opacity: 1;
+		left: .7em;
+	}
+}
+
+@keyframes letterSlideF {
+	0% {
+		left: -5em;
+	}
+	50% {
+		opacity: 1;
+		
+	}
+	100% {
+		opacity: 1;
+		left: 1.35em;
+	}
+}
+
+@keyframes letterSlideT {
+	0% {
+		left: -5em;
+	}
+	50% {
+		opacity: 1;		
+	}
+	100% {
+		opacity: 1;
+		left: 1.8em;
+	}
+}
+
+@keyframes textFall {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(55deg);
+	}
+	50% {
+		transform: rotate(45deg);
+	}
+	75% {
+		transform: rotate(65deg) translateY(1em);
+	}
+	100% {
+		transform: rotate(90deg) translateX(20em);
+	}
+}
+
+/* Blok animaties */
+@keyframes blockFlyRed {
+	0% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(50em);
+	}
+}
+
+@keyframes blockFlyGreen {
+	0% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateX(-50em);
+	}
+}
+
+@keyframes blockFlyBlue {
+	0% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateY(50em);
+	}
+}
+
+@keyframes blockFlyYellow {
+	0% {
+		transform: translateX(-300%);
+	}
+	100% {
+		transform: translateY(-50em);
+	}
+}
+
+
+
