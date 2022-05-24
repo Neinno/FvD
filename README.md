@@ -58,7 +58,7 @@ Tijdens FvO ga ik beter worden in het schrijven van CSS. Voor opdracht 1 heb ik 
   ### Dit was lastig/Is niet gelukt:
   Ik heb het niet voor elkaar kunnen krijgen om de reduced motion toe te passen. 
 
-  <img src="readme-images/nope1.jpg" width="375px" alt="bummer">
+  <img src="readme-images/nope1.png" width="375px" alt="bummer">
 
   Wat ook niet gelukt is is om de animatie te blijven loopen. Als de animatie voorbij is gaat hij niet opnieuw
 </details>
