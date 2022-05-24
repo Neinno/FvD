@@ -45,14 +45,14 @@ Tijdens FvO ga ik beter worden in het schrijven van CSS. Voor opdracht 1 heb ik 
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/Resultaat.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Resultaat.png" width="375px" alt="uitomst opdracht 1">
 
   Voor het logo van Microsoft heb ik gekozen om alles een beetje om te laten vallen.
 
   ### Dit ging goed/Heb ik geleerd: 
   Tijdens dit project heb ik veel geleerd over CSS animaties, en heb geleerd hoe before en after nou precies werken. Ik wist voordat ik aan dit project ging werken niet dat je meerdere animaties kon toepassen op een element. Dit heb ik gebruikt bij de blokjes van Microsoft.
 
-  <img src="readme-images/dblanimation.jpg" width="375px" alt="top">
+  <img src="readme-images/dblanimation.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:

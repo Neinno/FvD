@@ -50,12 +50,6 @@ button, summary {
 	}
 }
 
-@media (prefers-reduced-motion) {
-  h1 {
-		animation: textFall pause;
-	}
-}
-
 
 
 /****************/
@@ -106,7 +100,8 @@ html::before {
 	top: calc(50% - 1.5em);
 	width: 2em;
 	animation: slideFadeIn 4s forwards,
-						 blockFlyRed 2s forwards 10.5s;
+						 blockFlyRed 2s forwards 10.5s,
+						 blockBackRed 2s forwards 13s;
 }
 
 html::after {
@@ -115,7 +110,8 @@ html::after {
 	top: calc(50% - 1.5em);
 	width: 2em;
 	animation: slideFadeIn 4s forwards,
-						 blockFlyGreen 2s forwards 10.5s;
+						 blockFlyGreen 2s forwards 10.5s,
+						 blockBackGreen 2s forwards 13s;
 }
 
 body::before {
@@ -124,7 +120,8 @@ body::before {
 	top: calc(50% + .75em);
 	width: 2em;
 	animation: slideFadeIn 4s forwards,
-						 blockFlyBlue 2s forwards 10.5s;
+						 blockFlyBlue 2s forwards 10.5s,
+						 blockBackBlue 2s forwards 13s;
 }
 
 body::after {
@@ -133,7 +130,8 @@ body::after {
 	top: calc(50% + .75em);
 	width: 2em;
 	animation: slideFadeIn 4s forwards,
-						 blockFlyYellow 2s forwards 10.5s;
+						 blockFlyYellow 2s forwards 10.5s,
+						 blockBackYellow 2s forwards 13s;
 }
 
 
@@ -405,7 +403,7 @@ h1 span:nth-of-type(9) {
 		transform: translateX(-300%);
 	}
 	100% {
-		transform: translateX(50em);
+		transform: translateX(100em);
 	}
 }
 
@@ -414,7 +412,7 @@ h1 span:nth-of-type(9) {
 		transform: translateX(-300%);
 	}
 	100% {
-		transform: translateX(-50em);
+		transform: translateX(-100em);
 	}
 }
 
@@ -423,7 +421,7 @@ h1 span:nth-of-type(9) {
 		transform: translateX(-300%);
 	}
 	100% {
-		transform: translateY(50em);
+		transform: translateY(100em);
 	}
 }
 
@@ -432,7 +430,44 @@ h1 span:nth-of-type(9) {
 		transform: translateX(-300%);
 	}
 	100% {
-		transform: translateY(-50em);
+		transform: translateY(-100em);
+	}
+}
+
+/* Blok terug animatie */
+@keyframes blockBackRed {
+	0% {
+		transform: translateX(100em);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes blockBackGreen {
+	0% {
+		transform: translateX(-100em);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes blockBackBlue {
+	0% {
+		transform: translateX(100em);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes blockBackYellow {
+	0% {
+		transform: translateX(-100em);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
 
