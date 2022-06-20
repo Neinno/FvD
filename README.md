@@ -72,15 +72,16 @@ Tijdens FvO ga ik beter worden in het schrijven van CSS. Voor opdracht 1 heb ik 
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/opd2.jpg" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Alle nummers van de bingo kaart moeten random zijn.
+  - De balletjes moeten een voor een op het scherm komen.
+  - Deze dingen wil ik oplossen met javascript.
+  - Bingo kaart moet te kunnen bedienen zijn met toetsenbord
+  - BINGO roepen als je klaar bent om het spelletje te winnen.
 </details>
 
 

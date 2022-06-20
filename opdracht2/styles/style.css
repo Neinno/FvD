@@ -4,54 +4,291 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
+  font-family: "eenfont";
+  src: url("../fonts/eenfont.woff2") format("woff2"),
+    url("../fonts/eenfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-
-
-
-
 
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-button, summary {
-	cursor: pointer;
+button,
+summary {
+  cursor: pointer;
 }
-
-
-
-
 
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+  /* VARS */
+  --color-text: #111;
+  --color-text-white: #111;
+  --color-white: #eee;
+  --color-black: #111;
+  --color-header: #F9F4F5;
+  --color-button: #000000;
+  --color-card: #eee;
+  --color-ball: #d3ca43;
+  --background-one: #ADD8E6;
+  --background-two: #87CEEB;
 }
 
-
-
-
+@media (prefers-color-scheme: dark) {
+	:root {
+    --color-text: #eee;
+    --background-one: #4f2083;
+    --background-two: #63238a;
+	}
+}
 
 /****************/
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
+  font-family: eenfont, sans-serif;
+  color: var(--color-text);
+  background-image: conic-gradient(
+    var(--background-one) 60deg,
+    var(--background-two) 60deg 120deg,
+    var(--background-one) 120deg 180deg,
+    var(--background-two) 180deg 240deg,
+    var(--background-one) 240deg 300deg,
+    var(--background-two) 300deg
+  );
+  border-radius: 50%;
+  background-attachment: fixed;
 }
 
-/* jouw code */
+header {
+  height: 3em;
+  background-color: var(--color-header);
+  text-align: center;
+  color: var(--color-black)
+}
 
+main {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: var(--color-text);
+  z-index: 0;
+  max-width: 35vw;
+  text-align: center;
+}
+
+/* Balletjes */
+main section:nth-of-type(1) {
+  background-color: var(--color-card);
+  margin: 1em auto;
+  max-width: 390px;
+  height: 3em;
+  width: 80vw;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Kaart */
+main > ul {
+  background-color: var(--color-card);
+  margin: 1em auto;
+  padding: 0.5em;
+  max-height: 390px;
+  height: 80vw;
+  aspect-ratio: 1/1;
+  display: grid;
+  grid-gap: 1vw;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  transform: translateY(-100vh);
+  transition: 1s;
+  backface-visibility: hidden;
+  position: relative;
+}
+
+main > ul li {
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+main > section > p {
+  color: var(--color-text);
+  text-align: center;
+  padding: .5em 0;
+}
+
+.bingo {
+  background-color: var(--color-ball);
+  transition: 1s;
+}
+
+.bingo::after {
+  content: 'Bingo!';
+  position: absolute;
+  color: var(--color-text);
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 2em;
+  background-color: var(--background-two);
+  border-radius: 1em;
+}
+
+main > ul li:focus, main > ul li:hover {
+  border: 2px solid var(--color-black);
+  font-size: 1.2em;
+  transition: .5s;
+  cursor: pointer;
+}
+
+main section > ul {
+	display: flex;
+	justify-content: right;	
+	flex-wrap: nowrap;
+	flex-shrink: 0;
+	overflow: scroll;
+	gap: .1em;
+  padding: 0.1em 0;
+	height: inherit;
+  flex-direction: row;
+  position: relative;
+}
+
+main section > ul li {
+	background: var( --color-ball);
+	border-radius: 50%;
+	aspect-ratio: 1/1;
+  height: 100%;
+	display: flex;
+	color: var(--color-white);
+	align-items: center;
+	justify-content: center;
+  opacity: 0;
+  animation: animateBall 1s forwards;
+}
+
+button {
+  color: var(--color-white);
+  background-color: var(--color-button);
+  border: 0;
+  transition: .5s;
+}
+
+button:hover {
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-black)
+}
+
+main > button {
+  padding: 1em 2em;
+  width: 10em;
+  align-self: center;
+  text-align: center;
+  opacity: 0;
+ 
+}
+
+nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+nav button {
+  padding: 1em;
+  position: absolute;
+}
+
+nav > button {
+  bottom: 0;
+}
+
+nav > section {
+  background-color: var(--color-header);
+  height: 100vh;
+  position: fixed;
+  left:0;
+  top:0;
+  width: 100%;
+  max-width: 15em;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+.show {
+  transform: translateX(0);
+}
+
+.showMain {
+  transform: translateY(0);
+}
+
+.showButton {
+  opacity: 1;
+  transition: 1s;
+}
+
+.bingoActive {
+  background-color: var(--color-ball);
+  color: var(--color-text-white)
+}
+
+nav > section > h2 {
+  text-align: center;
+  color: var(--color-black)
+}
+
+nav > section > button:first-of-type {
+  position: absolute;
+  border-radius: 50%;
+  bottom: 10em;
+  padding: 1.5em 1em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+nav > section > button:last-of-type {
+  position: absolute;
+  padding: 1em 2em;
+  bottom: 1em;
+  right: 1em;
+}
+
+@keyframes animateBall {
+  0% {
+    opacity: 1;
+    transform: translateX(10vw);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
