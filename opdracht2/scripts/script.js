@@ -9,7 +9,7 @@ let ballFeedback = document.querySelector('main > section > p')
 // Random ball Array, waar de balletjes in komen
 const randomBall = [];
 // Delay voor hoe lang het duurt voordat de balletjes
-const delay = 2000;
+const delay = 10000;
 // Aantal ballen 
 const ballAmmount = 75;
 
