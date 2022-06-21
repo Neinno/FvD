@@ -9,7 +9,13 @@ Tijdens FvO ga ik beter worden in het schrijven van CSS. Voor opdracht 1 heb ik 
 ## Bronnenlijst
   1. https://css-tricks.com/almanac/selectors/a/after-and-before/
   2. https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
-  3. -...-
+  3. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this
+  4. https://stackoverflow.com/questions/45498873/add-a-delay-after-executing-each-iteration-with-foreach-loop
+  5. https://developer.mozilla.org/en-US/docs/Web/API/Element/remove
+  6. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement
+  7. https://css-tricks.com/snippets/css/complete-guide-grid/
+  8. https://stackoverflow.com/questions/5915096/get-a-random-item-from-a-javascript-array
+  9. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
 
 
